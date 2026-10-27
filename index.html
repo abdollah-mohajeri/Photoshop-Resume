@@ -54,8 +54,13 @@ section{padding:clamp(72px,11vw,150px) 0}
 h2{font-family:var(--serif);font-weight:300;font-size:clamp(2.2rem,5vw,4rem);line-height:1.05;margin-bottom:clamp(32px,5vw,64px)}
 
 /* work */
-.grid{columns:2 420px;column-gap:clamp(14px,2vw,28px)}
-.item{break-inside:avoid;margin-bottom:clamp(14px,2vw,28px);cursor:pointer;background:none;border:0;color:inherit;text-align:left;width:100%;font:inherit;display:block}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:clamp(14px,2vw,28px);
+  align-items:start;
+}
+.item{cursor:pointer;background:none;border:0;color:inherit;text-align:left;width:100%;font:inherit;display:block}
 .item .ph{transition:filter .4s}
 .item:hover .ph{filter:brightness(1.08)}
 .item .cap{display:flex;justify-content:space-between;gap:12px;padding:12px 2px 0;font-size:.85rem;color:var(--mute)}
