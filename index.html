@@ -143,6 +143,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .lb.zoomed .lbbox{margin:0;align-items:flex-start}
 body.nos{overflow:hidden}
 @media(max-width:700px){.lb{padding:64px 12px 28px}.lb .nv{width:40px;height:40px;font-size:1.6rem;background:rgba(15,13,24,.55)}.lb .nvp{left:6px}.lb .nvn{right:6px}}
+#cur{opacity:0;transition:opacity .2s}body.has-cur #cur{opacity:1}
+#cur svg{display:block;fill:#ff7a1a;stroke:#fff;stroke-width:1.2;stroke-linejoin:miter;transform-origin:2px 2px;transition:transform .15s}
+#cur.alt svg{transform:scale(1.25)}
+@media(hover:hover) and (pointer:fine){body.has-cur,body.has-cur *{cursor:none!important}}
+header .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center}
+.tg{justify-self:end}
 .fx{position:fixed;width:9px;height:9px;border-radius:2px;z-index:95;pointer-events:none}
 @media(max-width:900px){.games{grid-template-columns:1fr}}
 @media(max-width:820px){.cols,.grid{grid-template-columns:1fr}nav a{padding:8px 10px;font-size:.8rem}.chip{font-size:.8rem;padding:7px 13px}.list li{flex-direction:column;gap:2px}.list li span{text-align:left}.hint{font-size:.7rem}}
@@ -162,9 +168,9 @@ body.nos{overflow:hidden}
 </head>
 <body>
 <div id="bar"></div>
-<div id="cur" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18"><path d="M1 1l6.5 16 2.2-6.6L16.3 8z"/></svg><span id="curTxt">Hello 👋</span></div>
+<div id="cur" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22"><path d="M2 2v15l4-3.7 2.8 6.2 2.6-1.2-2.8-6.1H14z"/></svg></div>
 <header><div class="wrap">
-  <a class="mark" href="#top" id="mark"></a>
+  <span></span>
   <nav><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a><a href="#fun">Fun</a></nav>
   <button class="tg" id="tg" aria-label="Toggle dark mode">◐</button>
 </div></header>
@@ -439,7 +445,6 @@ function burst(el){
 
 /* text */
 document.title = SITE.name + " " + SITE.nameSecondLine + " — " + SITE.title;
-$('mark').textContent = SITE.name;
 $('heroSub').textContent = SITE.intro; $('status').textContent = SITE.status;
 $('contactTitle').textContent = SITE.contactTitle;
 $('mail').textContent = SITE.email; $('mail').href = 'mailto:' + SITE.email;
@@ -497,7 +502,7 @@ $('hero').addEventListener('click', e => {
 
 /* work */
 const tagsOf = w => (w.note || 'Other').split(',').map(s => s.trim()), items = [];
-const pri = ['Character Design', 'UI/UX', 'Branding', 'Editorial Design', 'Icons', 'Banner', 'Digital Drawing', 'Digital Illustration', 'Design', 'After Before', 'Retouching'];
+const pri = ['Character Design', 'Banner', 'UI/UX', 'Branding', 'Editorial Design', 'Icons', 'Digital Drawing', 'Digital Illustration', 'Design', 'After Before', 'Retouching'];
 const pr = w => tagsOf(w).reduce((m, t) => Math.min(m, pri.indexOf(t) < 0 ? 99 : pri.indexOf(t)), 99);
 SITE.work.sort((a, b) => pr(a) - pr(b));
 const cnt = {};
@@ -516,7 +521,8 @@ SITE.work.forEach((w, n) => {
 });
 const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
 items.forEach(b => io.observe(b));
-['All', ...new Set(SITE.work.flatMap(tagsOf))].forEach((tag, k) => {
+const tr = t => pri.indexOf(t) < 0 ? 99 : pri.indexOf(t);
+['All', ...[...new Set(SITE.work.flatMap(tagsOf))].sort((a, b) => tr(a) - tr(b))].forEach((tag, k) => {
   const f = document.createElement('button'); f.textContent = tag; if (!k) f.className = 'on';
   f.onclick = () => {
     [...$('filters').children].forEach(x => x.classList.remove('on')); f.classList.add('on');
@@ -625,8 +631,8 @@ addEventListener('pointermove', e => {
   if (!fine) return;
   document.body.classList.add('has-cur');
   $('cur').style.transform = 'translate(' + e.clientX + 'px,' + e.clientY + 'px)';
-  const v = e.target.closest && e.target.closest('[data-cur]');
-  $('cur').classList.toggle('alt', !!v); $('curTxt').textContent = v ? v.dataset.cur : 'Hello 👋';
+  const v = e.target.closest && e.target.closest('[data-cur],a,button');
+  $('cur').classList.toggle('alt', !!v);
   const h = $('hero').getBoundingClientRect(); $('hero').style.setProperty('--mx', (e.clientX - h.left) + 'px'); $('hero').style.setProperty('--my', (e.clientY - h.top) + 'px');
 });
 if (fine && !still) document.querySelectorAll('[data-mag]').forEach(m => {
