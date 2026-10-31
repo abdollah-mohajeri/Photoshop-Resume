@@ -3,8 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Abdollah Mohajeri — UI/UX Designer</title>
-<meta name="description" content="UI/UX, design, digital drawing, game art and fashion retouching portfolio.">
+<title>Abdollah Mohajeri — UI/UX &amp; Product Designer</title>
+<meta name="description" content="UI/UX and product designer with 10+ years inside software teams. Apps and games shipped to 6.4M+ installs. Figma, interaction design, icons and digital art.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Abdollah Mohajeri — UI/UX &amp; Product Designer">
+<meta property="og:description" content="UI/UX and product designer with 10+ years inside software teams. Apps and games shipped to 6.4M+ installs. Figma, interaction design, icons and digital art.">
+<meta property="og:image" content="https://abdollah-mohajeri.github.io/Photoshop-Resume/images/work-07.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Abdollah Mohajeri","jobTitle":"UI/UX & Product Designer","email":"Abdollahmoajeri.net@gmail.com","sameAs":["https://www.linkedin.com/in/abdollah-mohajeri/"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
@@ -53,10 +59,10 @@ h1 .ch{display:inline-block;font-weight:400;font-variation-settings:'wght' 400;a
 .pin span{position:absolute;left:34px;top:0;background:var(--card);border:1.5px solid var(--violet);border-radius:0 12px 12px 12px;padding:6px 12px;font-size:.82rem;white-space:nowrap}
 
 #cur{position:fixed;left:0;top:0;z-index:90;pointer-events:none;display:none}
-#cur svg{display:block;fill:var(--coral);filter:drop-shadow(0 2px 3px rgba(0,0,0,.25))}
+#cur svg{display:none;fill:var(--coral);filter:drop-shadow(0 2px 3px rgba(0,0,0,.25))}
 #cur span{position:absolute;left:16px;top:18px;background:var(--coral);color:#fff;font-size:.75rem;font-weight:500;padding:3px 10px;border-radius:0 10px 10px 10px;white-space:nowrap}
 #cur.alt span{background:var(--violet);padding:5px 14px}
-@media(hover:hover) and (pointer:fine){#cur{display:block}body.has-cur,body.has-cur *{cursor:none!important}}
+@media(hover:hover) and (pointer:fine){#cur{display:block}}
 
 .marq{background:var(--ink);color:var(--canvas);overflow:hidden;padding:18px 0;white-space:nowrap}
 .marq div{display:inline-block;animation:slide 38s linear infinite;font-family:var(--display);font-weight:600;font-size:1.3rem}
@@ -124,10 +130,24 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .lbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:center;color:#c9c5dc;font-size:.9rem}
 .lb button{background:none;border:1px solid rgba(243,242,248,.3);color:#fff;padding:9px 20px;border-radius:999px;font-size:.88rem;transition:background .2s,color .2s}
 .lb button:hover{background:#fff;color:#15131f}.lb .x{position:absolute;top:18px;right:20px}
+.ldesc{max-width:62ch;text-align:center;color:#d6d2e8;font-size:.95rem;line-height:1.55}
+.tease{color:#a7a2bd;font-size:.88rem;line-height:1.5;padding:6px 2px 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.lb img{cursor:zoom-in}.lb.zoomed{overflow:auto;justify-content:flex-start;align-items:flex-start}.lb.zoomed img{max-width:none;max-height:none;cursor:zoom-out}.lb .x{position:fixed}
 .fx{position:fixed;width:9px;height:9px;border-radius:2px;z-index:95;pointer-events:none}
 @media(max-width:900px){.games{grid-template-columns:1fr}}
 @media(max-width:820px){.cols,.grid{grid-template-columns:1fr}nav a{padding:8px 10px;font-size:.8rem}.chip{font-size:.8rem;padding:7px 13px}.list li{flex-direction:column;gap:2px}.list li span{text-align:left}.hint{font-size:.7rem}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.item{opacity:1;transform:none}}
+.status{display:inline-flex;align-items:center;gap:9px;margin-top:26px;padding:6px 16px;border:1px solid var(--line);border-radius:999px;font-size:.85rem;background:var(--card)}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:#2ec4b6;animation:ping 1.8s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(46,196,182,.6)}70%,100%{box-shadow:0 0 0 9px rgba(46,196,182,0)}}
+.btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:22px}.btns .cta{margin:0}
+.cta.ghost{background:none;color:var(--ink);border:1.5px solid var(--ink)}.cta.ghost:hover{background:var(--ink);color:var(--canvas)}
+.stats{border-bottom:1px solid var(--line)}
+.sg{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-top:44px;padding-bottom:44px}
+.st b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(2rem,4.5vw,3.6rem);letter-spacing:-.04em;line-height:1.05;background:linear-gradient(90deg,var(--violet),var(--coral));-webkit-background-clip:text;background-clip:text;color:transparent}
+.st span{color:var(--mute);font-size:.9rem}
+@media(max-width:820px){.sg{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.mark{padding:6px 12px;font-size:.9rem}nav a{padding:6px 7px;font-size:.72rem}.tg{width:34px;height:34px}}
 </style>
 </head>
 <body>
@@ -142,18 +162,26 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="hero" id="hero">
     <div class="chips" id="chips"></div>
     <div class="stage">
-      <div class="frame"><i></i><i></i><i></i><i></i><h1 id="heroName" aria-label=""></h1><span class="dim">Hug × Hug</span></div>
-      <p class="sub" id="heroSub"></p>
-      <a class="cta" href="#work" data-mag>View selected work</a>
+      <div class="frame"><i></i><i></i><i></i><i></i><h1 id="heroName" aria-label="">Abdollah Mohajeri</h1><span class="dim">Hug × Hug</span></div>
+      <p class="sub" id="heroSub">A designer with 10+ years inside software teams: I design clear interfaces that are realistic to build — and I’ve shipped apps and games to 6.4M+ installs.</p>
+      <p class="status" id="status"></p>
+      <div class="btns"><a class="cta" href="#work" data-mag>View selected work</a></div>
     </div>
     <p class="hint">Move your mouse over the name · drag the tags · click to leave a comment</p>
   </div>
   <div class="marq" aria-hidden="true"><div id="marq"></div></div>
 
+  <div class="stats"><div class="wrap sg" id="stats"></div></div>
+
   <section id="work" class="work"><div class="wrap">
     <h2>Selected work</h2>
     <div class="filters" id="filters"></div>
     <div class="grid" id="grid"></div>
+  </div></section>
+
+  <section id="about" class="about"><div class="wrap">
+    <h2>About</h2>
+    <div class="cols"><div id="aboutText"></div><ul class="list" id="services"></ul></div>
   </div></section>
 
   <section id="fun"><div class="wrap">
@@ -169,11 +197,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     </div>
   </div></section>
 
-  <section id="about" class="about"><div class="wrap">
-    <h2>About</h2>
-    <div class="cols"><div id="aboutText"></div><ul class="list" id="services"></ul></div>
-  </div></section>
-
   <section id="contact" class="contact"><div class="wrap">
     <h2 id="contactTitle"></h2>
     <a class="mail" id="mail" data-mag></a>
@@ -184,7 +207,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
   <button class="x" id="close">Close</button>
-  <img id="lbImg" alt="">
+  <img id="lbImg" alt="" title="Click to zoom">
+  <p class="ldesc" id="lbDesc"></p>
   <div class="lbar"><button id="prev">Prev</button><span id="lbCap"></span><button id="next">Next</button><button id="toggle" hidden>Show original</button></div>
 </div>
 
@@ -195,60 +219,165 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 const SITE = {
   name: "Abdollah",
   nameSecondLine: "Mohajeri",
-  role: "UI/UX, Design, Digital Drawing, Game Art, Fashion retoucher & colour artist",
-  intro: "Refined retouching and colour work for fashion, beauty and editorial — skin that stays real, fabric that stays true.",
+  role: "UI/UX Design, Game Art, Product Design, Digital Illustration, Figma",
+  intro: "A designer with 10+ years inside software teams: I design clear interfaces that are realistic to build — and I’ve shipped apps and games to 6.4M+ installs.",
 
   about: [
-     "I specialize in UI/UX design, creating intuitive, visually engaging, Digital Drawing and user-centered experiences for websites and mobile applications. Using Figma, I develop interface designs, wireframes, interactive prototypes, and modern digital layouts that combine aesthetics with usability.",
-
-  "My expertise also includes graphic design, mockup creation, custom icon design, advertising banners, social media stories, promotional visuals, photo manipulation, high-end fashion and beauty retouching, skin and fabric refinement, hair retouching, and professional colour grading. With experience in Photoshop, Figma, Premiere Pro, Lightroom, and Capture One, I deliver polished visual solutions for digital platforms, branding, advertising campaigns, and print media."
-  ],
+  "I’m a UI/UX and product designer who has spent over a decade inside software teams — as an engineer, a QA lead and a designer. That means I design interfaces that are clear for users and realistic for developers to build, and I can talk to both sides without a translator.",
+  "I design websites, mobile apps and digital products in Figma — interface design, wireframes, interactive prototypes and mockups. My apps and games have reached millions of users on Cafe Bazaar, Myket and Google Play. I round this out with icon design, banners, social visuals, photo manipulation, digital illustration and high-end fashion retouching, using Photoshop, Premiere Pro, Lightroom and Capture One."
+],
   services: [
-    ["High-end skin retouching", "Frequency separation, dodge & burn"],
-  ["Colour grading", "Editorial & campaign looks"],
-  ["Fabric & garment cleanup", "Wrinkles, drape, shape"],
-  ["Hair & beauty finishing", "Flyaways, makeup refinement"],
-  ["UI/UX Design", "User interface, user experience, web & app design"],
-  ["Figma", "UI design, wireframes, interactive prototypes"],
-  ["Mockup Design", "Professional product and branding mockups"],
-  ["Icon Design", "Custom icons and icon sets"],
-  ["Banner Design", "Web, advertising and promotional banners"],
-  ["Story Design", "Instagram stories and social media visuals"],
-  ["Graphic Design", "Creative layouts, visual communication and branding"],
-  ["Photo Editing", "Image enhancement, retouching and photo manipulation"],
-  ["Advertising Design", "Promotional graphics and campaign visuals"],
-  ["Software", "Photoshop, Figma, Premiere Pro, Lightroom, Capture One"]
+  [
+    "UI/UX Design",
+    "User interface, user experience, web & app design"
   ],
+  [
+    "Figma",
+    "UI design, wireframes, interactive prototypes"
+  ],
+  [
+    "Design × Engineering",
+    "Handoff informed by C#, .NET & React experience"
+  ],
+  [
+    "Usability & QA",
+    "User acceptance testing, edge cases, clear bug reports"
+  ],
+  [
+    "Mockup Design",
+    "Professional product and branding mockups"
+  ],
+  [
+    "Icon Design",
+    "Custom icons and icon sets"
+  ],
+  [
+    "Banner Design",
+    "Web, advertising and promotional banners"
+  ],
+  [
+    "Story Design",
+    "Instagram stories and social media visuals"
+  ],
+  [
+    "Graphic Design",
+    "Creative layouts, visual communication and branding"
+  ],
+  [
+    "Advertising Design",
+    "Promotional graphics and campaign visuals"
+  ],
+  [
+    "Photo Editing",
+    "Image enhancement, retouching and photo manipulation"
+  ],
+  [
+    "High-end skin retouching",
+    "Frequency separation, dodge & burn"
+  ],
+  [
+    "Colour grading",
+    "Editorial & campaign looks"
+  ],
+  [
+    "Fabric & garment cleanup",
+    "Wrinkles, drape, shape"
+  ],
+  [
+    "Hair & beauty finishing",
+    "Flyaways, makeup refinement"
+  ],
+  [
+    "Software",
+    "Figma, Photoshop, Premiere Pro, Lightroom, Capture One"
+  ]
+],
 
   work: [
-    { title: "Editorial no. 1", note: "Character Design", after: "images/work-01.jpg", ratio: "16/9" },
-    { title: "Editorial no. 2", note: "Character Design", after: "images/work-04.jpg", ratio: "16/9" },
-    { title: "Editorial no. 3", note: "Banner", after: "images/work-02.jpg", ratio: "16/9" },
-    { title: "Editorial no. 4", note: "Banner", after: "images/work-05.jpg", ratio: "16/9" },
-    { title: "Editorial no. 5", note: "Icons", after: "images/work-03.jpg", ratio: "3/2" },
-    { title: "Editorial no. 6", note: "After Before", after: "images/work-06.jpg", ratio: "3/2" },
-    { title: "Editorial no. 7", note: "Design,UI/UX", after: "images/work-07.jpg", ratio: "16/9" },
-    { title: "Editorial no. 8", note: "Design,UI/UX", after: "images/work-08.jpg", ratio: "16/9" },
-    { title: "Editorial no. 9", note: "Design,UI/UX", after: "images/work-09.jpg", ratio: "16/9" },
-    { title: "Editorial no. 10", note: "Design,UI/UX", after: "images/work-10.jpg", ratio: "16/9" },
-    { title: "Editorial no. 11", note: "Design,UI/UX", after: "images/work-11.jpg", ratio: "16/9" },
-    { title: "Editorial no. 12", note: "Design,UI/UX", after: "images/work-12.jpg", ratio: "16/9" },
-    { title: "Editorial no. 13", note: "Design,UI/UX", after: "images/work-13.jpg", ratio: "16/9" },
-    { title: "Editorial no. 14", note: "Design,UI/UX", after: "images/work-14.jpg", ratio: "16/9" },
-    { title: "Editorial no. 15", note: "Design,UI/UX", after: "images/work-15.jpg", ratio: "16/9" },
-    { title: "Editorial no. 16", note: "Design,UI/UX", after: "images/work-16.jpg", ratio: "16/9" },
-    { title: "Editorial no. 17", note: "Design,UI/UX", after: "images/work-17.jpg", ratio: "16/9" },
-    { title: "Editorial no. 18", note: "Design,UI/UX", after: "images/work-18.jpg", ratio: "16/9" },
-    { title: "Editorial no. 19", note: "Design,UI/UX", after: "images/work-19.jpg", ratio: "16/9" },
-    { title: "Editorial no. 20", note: "Design,UI/UX", after: "images/work-20.jpg", ratio: "16/9" },
-    { title: "Editorial no. 21", note: "Design,UI/UX", after: "images/work-21.jpg", ratio: "16/9" },
-    { title: "Editorial no. 22", note: "Design,UI/UX", after: "images/work-22.jpg", ratio: "16/9" },
-    { title: "Editorial no. 23", note: "Digital Drawing", after: "images/work-23.jpg", ratio: "16/9" },
-    { title: "Editorial no. 24", note: "Digital Illustration", after: "images/work-24.jpg", ratio: "16/9" },
-    { title: "Editorial no. 25", note: "Icons", after: "images/work-25.jpg", ratio: "16/9" },
-    { title: "Editorial no. 26", note: "Banner", after: "images/work-26.jpg", ratio: "16/9" },
-    { title: "Editorial no. 27", note: "Retouching", after: "images/work-27.jpg", ratio: "16/9" },
-    { title: "Editorial no. 28", note: "Retouching", after: "images/work-28.jpg", ratio: "16/9" }
+    { title: "Princess — Hero Character", note: "Character Design", after: "images/work-01.jpg", ratio: "3/2",
+      tease: "The heroine of an adventure platformer, with a full pose and a swappable expression set.",
+      desc: "Lead character design for an adventure platformer starring a princess. The sheet pairs a full-body hero pose with four interchangeable expressions — a wink, a calm side-glance, a pout and a worried frown — so the character can react during dialogue and gameplay. The wide ruffled gown gives her an instantly readable silhouette, and warm orange hair and a coral dress pop against the cool, dark backdrop." },
+    { title: "Wizard — Supporting Character", note: "Character Design", after: "images/work-04.jpg", ratio: "3/2",
+      tease: "A mystic wizard from the same game world, mid-spell, with his own expression set.",
+      desc: "A supporting character from the same game world, built around a strong silhouette: a pointed, notched hat, a long flowing beard and a sweeping purple robe. He is caught mid-spell, with a softly glowing orb on a gnarled staff that lights up the rest of the palette. Alternate head expressions — eyes closed and a suspicious side-glance — give the animators ready-made moods to work with." },
+    { title: "Math Course Banner — Term 1", note: "Banner", after: "images/work-02.jpg", ratio: "16/9",
+      tease: "A Persian (RTL) web banner for online math courses aimed at gifted students.",
+      desc: "Web banner for the online math courses on the Easy Math (Umins) site, aimed at gifted students. The Persian, right-to-left layout is built to be scanned in seconds: a bold gradient headline, an info strip with sessions, instructor and term split by thin dividers, and a short note on what the package includes — video lessons, an exercise book and a smart exam. The instructor sits in a gradient-ringed circle that echoes the diagonal purple block behind her, adding energy while the text stays on a clean, light area." },
+    { title: "Math Course Banner — Term 3", note: "Banner", after: "images/work-05.jpg", ratio: "16/9",
+      tease: "Same banner system, new palette: a cyan-to-magenta variant for another term.",
+      desc: "The term-3 variant of the same banner system. The grid, type scale and info strip stay identical; only the accent palette (cyan to magenta) and the instructor portrait change. Every course in the series therefore feels like one family while remaining instantly distinguishable in a list of banners — and a new banner can be produced quickly from the same template." },
+    { title: "Icon Set — Drawing Lessons App", note: "Icons", after: "images/work-03.jpg", ratio: "3/2",
+      tease: "Nine round icons for a mobile app that teaches drawing, unified by one ring and one accent colour.",
+      desc: "Nine icons for a mobile app that teaches drawing. Each sits in the same grey-gradient disc with a thick red ring, and every illustration uses black line art with a single coral-red accent, so very different subjects — a butterfly, pencil and eraser, a notebook, a realistic pencil portrait, a full-body hero figure, a cartoon face — still read as one set. Functional icons for stars, an open door and a shopping bag complete the interface. The soft pink gradient backdrop keeps the whole grid light and friendly." },
+    { title: "Jewelry Photo Retouching — Before / After", note: "Retouching", after: "images/work-06.jpg", ratio: "3/2",
+      tease: "Cut-out and light correction for an online gold shop: a harsh backlit shot becomes a clean catalogue image.",
+      desc: "Product-photo cleanup for an online gold-jewelry shop. Left: the original, with harsh backlight, deep shadows across the hand and a busy green background. Right: the hand is cut out cleanly, placed on pure white and the lighting is rebalanced so skin tone is even and the fine chain bracelet and pendant stay clearly visible. The result is a catalogue-ready image where the jewelry, not the lighting, is the subject." },
+    { title: "RoyalSpin — Casino App", note: "Design,UI/UX", after: "images/work-07.jpg", ratio: "3/2", concept: true,
+      tease: "A dark-and-gold casino app: five core screens, a style guide and game icons.",
+      desc: "Presentation board for an online-casino app. A dark, gold-accented identity — black surfaces, a gold crown mark and one high-contrast gold button for every primary action — runs through five core screens (splash, home, slot game, live casino, account), plus deposit, slots and promotions screens. A compact style guide documents the palette, Montserrat type, buttons, bottom navigation and a set of game icons, so the system can be extended consistently." },
+    { title: "BelleVie — Beauty Store", note: "Design,UI/UX", after: "images/work-08.jpg", ratio: "3/2", concept: true,
+      tease: "A soft-pink beauty storefront built around a clear hero, categories and best sellers.",
+      desc: "Homepage design for a beauty e-commerce store. Blush pinks and a serif/sans pairing set a premium but friendly tone. The page flows from a large hero with a single ‘Shop Now’ action to circular category shortcuts with product counts, then a best-seller row where every card repeats the same structure — badge, wishlist heart, rating, price and Add to Cart. Side banners, a newsletter block and a trust bar (shipping, payment, authenticity, support) complete the page." },
+    { title: "Serene Touch — Massage Booking", note: "Design,UI/UX", after: "images/work-09.jpg", ratio: "3/2", concept: true,
+      tease: "A calm booking experience for a women-only massage studio, on web and mobile.",
+      desc: "Responsive website and mobile app for a women-only massage studio. Trust comes first: right under the hero, four reassurance points (safe & private, certified therapists, natural products, relaxing environment) answer the main hesitation before any service is shown. Service cards show duration and price up front, a ‘Book Now’ action stays visible in the header, and the mobile version swaps the menu for a four-tab bottom bar. A muted palette of deep green, dusty rose and sage keeps the mood calm." },
+    { title: "MindfulMe — Meditation App", note: "Design,UI/UX", after: "images/work-10.jpg", ratio: "3/2", concept: true,
+      tease: "A meditation app from a calm first launch to a distraction-free player.",
+      desc: "Design board for a meditation app, from first launch to daily use. The five key screens — splash, onboarding, home dashboard, meditation player and profile — trace a path from a calm first impression to a focused session. The player is stripped to essentials: a large play/pause button, a progress bar and one illustration. The board also documents wireframes, a small UI kit (colours, Inter type, buttons, toggle, tags, tab bar) and the key features it supports." },
+    { title: "Fixo — Home Repair Services", note: "Design,UI/UX", after: "images/work-11.jpg", ratio: "3/2", concept: true,
+      tease: "The full home-repair journey: find, book, track and confirm.",
+      desc: "Website and mobile app for booking home-repair technicians, covering the whole service journey rather than a single screen: find a technician by location, pick a service category, book, track the technician’s arrival with a step indicator and a map, and receive a confirmation. One blue palette and simple line icons keep every step consistent, and trust signals — verified experts, transparent pricing, ratings — repeat across the page." },
+    { title: "ShopNest — Marketplace", note: "Design,UI/UX", after: "images/work-12.jpg", ratio: "3/2", concept: true,
+      tease: "A dense marketplace homepage organised around one action colour.",
+      desc: "Marketplace homepage built to handle a very large catalogue. A persistent category menu, prominent search and a delivery-location selector sit above a hero carousel, a benefits strip, best sellers with discount badges, daily deals and a top-categories grid. Red works as the single action colour for search, Add to Cart and offers, which keeps the main paths easy to find in a dense layout." },
+    { title: "Luxe Jewels — Jewelry Store", note: "Design,UI/UX", after: "images/work-13.jpg", ratio: "3/2", concept: true,
+      tease: "A dark, gold-accented jewelry store with desktop and five mobile screens.",
+      desc: "Dark, gold-accented design for a luxury jewelry store, shown as a desktop homepage plus five mobile screens: home, product detail, account, cart and filters. Photography does the selling, with large product shots and minimal UI chrome, while gold buttons and thin dividers add a premium feel. The product page keeps price, rating, trust points, size selection and Add to Cart in one thumb-reachable column, and the filters cover price range, material and gemstone." },
+    { title: "Interactive Storybook Game — Library UI", note: "Design,UI/UX", after: "images/work-14.jpg", ratio: "3/2",
+      tease: "The library screen of an interactive storybook game: two heroines, a glass panel and eleven books.",
+      desc: "Library screen of an interactive storybook game. The two heroines flank a translucent glass panel — one against an icy blue background, the other against warm autumn orange — so the colour split tells them apart at a glance while the centre stays free for content. The panel holds a right-to-left grid of eleven book covers with Persian titles, and four round purple buttons (close, shop, favourites, info) sit in symmetrical bottom corners. Drifting snow sparkles and falling leaves add life without competing with the books. Character artwork is third-party and shown for context; the piece is about the interface design." },
+    { title: "Deliha — Brand Mark", note: "Branding", after: "images/work-15.jpg", ratio: "3/2",
+      tease: "A bold wordmark with a play-button D for a software, games and web company.",
+      desc: "Logo for Deliha, a company that builds software, games and websites. The D is cut open to hold a purple-to-pink play triangle — one gesture that signals both games and interactive media — and a matching gradient accent on the i repeats it. Soft, rounded white letterforms stand out on a deep violet-black background, and a widely spaced uppercase tagline names the three service areas." },
+    { title: "Atr — Fragrance Campaign", note: "Branding", after: "images/work-16.jpg", ratio: "3/2", concept: true,
+      tease: "A luxury perfume campaign: hero poster, two digital ads and a brand guide.",
+      desc: "Brand and advertising concept for a luxury fragrance. A warm golden-hour mood — black marble cap, amber glass, white jasmine, rough stone — carries one hero poster and two digital ads sized for 1080×1080 and 1200×628. The board documents the system behind it: four photography principles (natural light, shallow depth of field, rich textures, warm tones), a serif headline face and a four-colour palette of black, gold, sand brown and ivory. Short, widely spaced taglines keep the copy quiet so the bottle leads." },
+    { title: "Mino — Restaurant Menu & Identity", note: "Branding", after: "images/work-17.jpg", ratio: "3/2", concept: true,
+      tease: "A foil-stamped menu and brand system for a fine-dining restaurant and lounge.",
+      desc: "Brand identity and printed menu for a fine-dining restaurant and lounge. A deep green cover with a gold-foil logo and a botanical olive-leaf illustration sets the tone; inside, a cream page with clear sections (starters, mains, desserts, beverages), short descriptions and right-aligned prices keeps the menu easy to scan. The board also documents the print details (foil, illustration, edged paper), the serif and sans typography, a four-colour palette and the leaf and monogram brand elements." },
+    { title: "Lumière — Fashion Store", note: "Design,UI/UX", after: "images/work-18.jpg", ratio: "3/2", concept: true,
+      tease: "A warm, editorial homepage for a women’s fashion store, built around a sale campaign.",
+      desc: "Full-length homepage for a women’s fashion e-commerce brand. A dark hero with a serif headline and a single ‘Shop Now’ button opens the page, followed by a benefits strip, circular category shortcuts, a trending row with discount badges and ratings, a countdown banner for a last-chance offer and a newsletter sign-up. Cream, caramel and burgundy tones with a serif headline give a sale-driven layout an editorial, boutique feel." },
+    { title: "Hotel & Resort — Brand and Brochure", note: "Branding", after: "images/work-19.jpg", ratio: "3/2", concept: true,
+      tease: "A Persian-script hotel identity applied to a cover, a trifold and a booklet.",
+      desc: "Brand identity and brochure for a hotel and resort in Armenia. A Persian-script logotype and a minimal mountain mark appear on a deep green cover, a trifold brochure and a multi-page booklet, finished with gold foil and matte paper. Sunset photography of the mountains, pool and rooms sets a calm luxury tone; the pages cover rooms and suites with size and view, dining, wellness, and a clear reservation block with phone, address and website. The brand sheet lists a deep green, sage, gold and ivory palette with a serif-and-sans type pair." },
+    { title: "Haven — Specialty Coffee Brand", note: "Branding", after: "images/work-20.jpg", ratio: "3/2", concept: true,
+      tease: "A complete coffee-shop identity: logo, packaging, menu, social posts and signage.",
+      desc: "Complete brand system for a specialty coffee shop, built around one leaf-and-bean mark. The board shows logo variations (horizontal, stacked, badge, icon), single-origin bean bags, a cup, a two-page menu, business cards, social posts, a storefront sign and a staff apron. Deep green, cream, coffee brown and a terracotta accent stay constant, and the same serif and sans pair runs from packaging to social media, so the brand feels the same on a bag, a menu or a feed." },
+    { title: "Apex — Advertising Agency Identity", note: "Branding", after: "images/work-21.jpg", ratio: "3/2", concept: true,
+      tease: "An orange-and-black identity for an ad agency, with illustration and stationery.",
+      desc: "Visual identity for an advertising agency. An A-shaped mark with an orange dot-and-wedge detail is paired with a bold charcoal-and-orange palette, a flat illustration style (a figure with a megaphone) and a set of simple icons for strategy, branding, digital marketing and campaigns. The system is applied to business cards, letterhead, envelope, notebook, mug, bottle, tote bag and gift box, with the same diagonal orange shapes forming a recognisable pattern." },
+    { title: "Lumière — Magazine Design", note: "Editorial Design", after: "images/work-22.jpg", ratio: "3/2", concept: true,
+      tease: "Cover, spreads and typography for a fashion-and-lifestyle magazine.",
+      desc: "Editorial design for a fashion and lifestyle magazine. A bold serif masthead over a tightly cropped portrait makes the cover; inside, the spreads use generous white space, large photographs, pull quotes, short intros and a clean contents list organised by section. Serif headlines with a clean sans for body text and a palette of charcoal, rust, sand and cream give the issue a calm, premium rhythm." },
+    { title: "2D Game Environment — Japanese Village", note: "Digital Drawing", after: "images/work-23.jpg", ratio: "3/2",
+      tease: "Hand-drawn and digital level art for a side-scroller: house, rice fields, ground strip and props.",
+      desc: "Modular 2D environment art for a side-scrolling game with a Japanese village theme. A tea house with round lattice windows, rice paddies, a gnarled pine and hanging willow branches sit on a grass-topped ground strip with a soil cross-section that reads clearly as a platform edge. Below, the props are isolated on white for easy cut-out into a game engine: a spiral pickup disc, a tiled-roof temple gate and a red torii. Combining hand-drawn texture with clean digital shapes keeps the scene readable at game scale." },
+    { title: "Romantic Dinner Scene — Digital Illustration", note: "Digital Illustration", after: "images/work-24.jpg", ratio: "3/2",
+      tease: "A couple dining on a boat under a glowing night sky, with a retro dot-matrix scene menu.",
+      desc: "Digital illustration of a couple having dinner on a small boat beneath a luminous night sky. Clean line art with white fills lets the teal-and-violet light beams and floating particles carry the atmosphere. A retro dot-matrix ‘MENU’ panel in the corner lists the scene settings — time, weather, temperature, food and location — which suggests a customisable scene or a game-style selection screen." },
+    { title: "Storybook Cover Icons — 40-Title Library", note: "Icons", after: "images/work-25.jpg", ratio: "3/2",
+      tease: "Forty book icons built from one template, so very different covers read as a single shelf.",
+      desc: "A set of 40 book icons for a storybook library. Every story uses the same template — a red spine, a soft drop shadow and a translucent title bar across the top of the cover — so a mix of very different illustrations still reads as one consistent shelf. Persian display lettering in warm brown-gold keeps the titles legible over busy artwork, and the covers span classic fairy tales and fables such as Aladdin, Alice in Wonderland, Pinocchio, Snow White and Little Red Riding Hood." },
+    { title: "Nowruz Offer Banner — Audio Storybooks", note: "Banner", after: "images/work-26.jpg", ratio: "3/2",
+      tease: "A playful Persian New Year banner for audio-illustrated stories, with an open storybook door.",
+      desc: "Holiday discount banner for a product of audio and illustrated stories, made for Nowruz, the Persian New Year. A soft pink-to-green pastel gradient carries a playful Persian headline — ‘Once upon a time…’ — followed by stacked, multi-coloured lines reading ‘audio and illustrated stories’. A stack of storybooks on the left and an open arched wooden door onto a sunny meadow on the right suggest stepping into the story, while a wheatgrass sprout with a red ribbon and a calligraphic ‘Happy New Year’ tie it to the holiday." },
+    { title: "Bridal Portrait — Colour & Light Retouch", note: "Retouching", after: "images/work-27.jpg", ratio: "3/2",
+      tease: "A cool, flat wedding portrait relit into warm golden-hour light.",
+      desc: "Before and after of a bridal portrait. The original is cool and flat, with muted hair and visible skin texture. The edit adds warm golden-hour backlight with a soft glow on the veil and the leaves, enriches the hair colour, evens out skin tone and keeps the lace and bead detail of the gown crisp." },
+    { title: "Outdoor Portrait — Relight & Colour Grade", note: "Retouching", after: "images/work-28.jpg", ratio: "3/2",
+      tease: "A grey overcast portrait turned into warm, backlit evening light.",
+      desc: "Before and after of an outdoor portrait. The original is flat and grey under overcast light; the edit introduces warm, low-angle backlight, a glowing rim on the hair, richer greens and a soft, creamy background, and refines skin and lip tone for a polished editorial look." }
   ],
 
   contactTitle: "Let’s work together",
@@ -258,9 +387,12 @@ const SITE = {
     //{ label: "Telegram",  url: "https://t.me/yourhandle" },
     { label: "WhatsApp",  url: "https://wa.me/+37493091022" },
     { label: "LinkedIn",  url: "https://www.linkedin.com/in/abdollah-mohajeri/" },
-    //{ label: "Download CV", url: "cv.pdf" }
+    
   ],
   location: "Yerevan, Armenia",
+  title: "UI/UX & Product Designer",
+  status: "Open to UI/UX & Product Design roles",
+  stats: [["6.4M+", "App installs published"], ["5", "Editor’s Choice apps"], ["80+", "Brands designed for"], ["66K+", "Monthly active users supported"]],
   year: "2026"
 };
 /* ===================== end of editable block ===================== */
@@ -292,9 +424,9 @@ function burst(el){
 }
 
 /* text */
-document.title = SITE.name + " " + SITE.nameSecondLine + " — " + SITE.role;
+document.title = SITE.name + " " + SITE.nameSecondLine + " — " + SITE.title;
 $('mark').textContent = SITE.name;
-$('heroSub').textContent = SITE.role + ". " + SITE.intro;
+$('heroSub').textContent = SITE.intro; $('status').textContent = SITE.status;
 $('contactTitle').textContent = SITE.contactTitle;
 $('mail').textContent = SITE.email; $('mail').href = 'mailto:' + SITE.email;
 $('copy').textContent = '© ' + SITE.year + ' ' + SITE.name; $('loc').textContent = SITE.location;
@@ -306,7 +438,7 @@ $('marq').innerHTML = [...words, ...words].map(w => '<span>' + w + '</span><b>�
 
 /* hero name: letters get heavier near the cursor */
 const chars = [];
-$('heroName').setAttribute('aria-label', SITE.name + ' ' + SITE.nameSecondLine);
+$('heroName').textContent = ''; $('heroName').setAttribute('aria-label', SITE.name + ' ' + SITE.nameSecondLine);
 [SITE.name, SITE.nameSecondLine].filter(Boolean).forEach((line, li) => {
   const ln = document.createElement('span'); ln.className = 'ln'; ln.setAttribute('aria-hidden', 'true');
   [...line].forEach((c, k) => {
@@ -351,10 +483,16 @@ $('hero').addEventListener('click', e => {
 
 /* work */
 const tagsOf = w => (w.note || 'Other').split(',').map(s => s.trim()), items = [];
+const pri = ['UI/UX', 'Branding', 'Editorial Design', 'Icons', 'Banner', 'Character Design', 'Digital Drawing', 'Digital Illustration', 'Design', 'After Before', 'Retouching'];
+const pr = w => tagsOf(w).reduce((m, t) => Math.min(m, pri.indexOf(t) < 0 ? 99 : pri.indexOf(t)), 99);
+SITE.work.sort((a, b) => pr(a) - pr(b));
+const cnt = {};
+SITE.work.forEach(w => { if (/^Editorial no\./.test(w.title)) { const p = pri[pr(w)] || 'Design'; cnt[p] = (cnt[p] || 0) + 1; w.title = p + ' ' + String(cnt[p]).padStart(2, '0'); } });
 SITE.work.forEach((w, n) => {
   const b = document.createElement('button'); b.className = 'item'; b.dataset.cur = 'View'; b.setAttribute('aria-label', 'Open ' + w.title);
   const t = document.createElement('div'); t.className = 'tilt'; t.appendChild(photo(w.after, w.title, w.ratio)); b.appendChild(t);
-  const c = document.createElement('div'); c.className = 'cap'; c.innerHTML = '<b></b><span></span>'; c.firstChild.textContent = w.title; c.lastChild.textContent = w.note || ''; b.appendChild(c);
+  const c = document.createElement('div'); c.className = 'cap'; c.innerHTML = '<b></b><span></span>'; c.firstChild.textContent = w.title; c.lastChild.textContent = (w.note || '') + (w.concept ? ' · Concept' : ''); b.appendChild(c);
+  if (w.tease) { const p = document.createElement('p'); p.className = 'tease'; p.textContent = w.tease; b.appendChild(p); }
   b.onclick = () => openLb(n);
   if (fine && !still) {
     b.addEventListener('pointermove', e => { const r = b.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5; t.style.transform = 'rotateY(' + x * 10 + 'deg) rotateX(' + -y * 10 + 'deg)'; });
@@ -375,17 +513,29 @@ items.forEach(b => io.observe(b));
 
 /* lightbox */
 let cur = 0, showBefore = false; const N = SITE.work.length;
-function paint(){ const w = SITE.work[cur]; $('lbImg').src = showBefore && w.before ? w.before : w.after; $('lbImg').alt = w.title; $('lbCap').textContent = (cur + 1) + ' / ' + N + '  ·  ' + w.title + (w.note ? ' — ' + w.note : ''); $('toggle').hidden = !w.before; $('toggle').textContent = showBefore ? 'Show edited' : 'Show original'; }
-function go(d){ cur = (cur + d + N) % N; showBefore = false; paint(); }
+function paint(){ const w = SITE.work[cur]; $('lbImg').src = showBefore && w.before ? w.before : w.after; $('lbImg').alt = w.title; $('lbCap').textContent = (cur + 1) + ' / ' + N + '  ·  ' + w.title + (w.note ? ' — ' + w.note : '') + (w.concept ? ' · Concept' : ''); $('toggle').hidden = !w.before; $('lbDesc').textContent = w.desc || ''; $('toggle').textContent = showBefore ? 'Show edited' : 'Show original'; }
+function go(d){ $('lb').classList.remove('zoomed'); cur = (cur + d + N) % N; showBefore = false; paint(); }
 function openLb(n){ cur = n; showBefore = false; paint(); $('lb').classList.add('on'); $('close').focus(); }
-function closeLb(){ $('lb').classList.remove('on'); }
+function closeLb(){ $('lb').classList.remove('on', 'zoomed'); }
 $('close').onclick = closeLb; $('prev').onclick = () => go(-1); $('next').onclick = () => go(1);
 $('lb').onclick = e => { if (e.target === $('lb')) closeLb(); };
 $('toggle').onclick = () => { showBefore = !showBefore; paint(); };
+$('lbImg').onclick = () => $('lb').classList.toggle('zoomed');
 document.addEventListener('keydown', e => { if (!$('lb').classList.contains('on')) return; if (e.key === 'Escape') closeLb(); if (e.key === 'ArrowRight') go(1); if (e.key === 'ArrowLeft') go(-1); });
 let sx = null;
 $('lb').addEventListener('touchstart', e => sx = e.touches[0].clientX, { passive: true });
 $('lb').addEventListener('touchend', e => { if (sx === null) return; const d = e.changedTouches[0].clientX - sx; if (Math.abs(d) > 50) go(d < 0 ? 1 : -1); sx = null; });
+
+/* stats */
+const cio = new IntersectionObserver(es => es.forEach(en => {
+  if (!en.isIntersecting) return; cio.unobserve(en.target);
+  const b = en.target.firstChild, m = /^([\d.]+)(.*)$/.exec(b.dataset.v);
+  if (!m || still) return;
+  const to = parseFloat(m[1]), dec = (m[1].split('.')[1] || '').length, t0 = performance.now();
+  (function f(t){ const p = Math.min(1, (t - t0) / 1300); b.textContent = (to * (1 - Math.pow(1 - p, 3))).toFixed(dec) + m[2]; if (p < 1) requestAnimationFrame(f); })(t0);
+}), { threshold: .6 });
+if (!SITE.stats.length) $('stats').parentNode.remove();
+SITE.stats.forEach(([v, l]) => { const d = document.createElement('div'); d.className = 'st'; d.innerHTML = '<b></b><span></span>'; d.firstChild.dataset.v = v; d.firstChild.textContent = v; d.lastChild.textContent = l; $('stats').appendChild(d); cio.observe(d); });
 
 /* games */
 function record(k, v, high){ const b = store.get(k), nb = !b || (high ? v > b : v < b); if (nb) store.set(k, v); $('b' + k).textContent = 'Best: ' + (nb ? v : b); return nb; }
@@ -472,7 +622,3 @@ if (fine && !still) document.querySelectorAll('[data-mag]').forEach(m => {
 </script>
 </body>
 </html>
-
-    
-
-
